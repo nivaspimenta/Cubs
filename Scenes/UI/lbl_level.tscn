@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://banew4s5g3lgd"]
+
+[ext_resource type="FontFile" uid="uid://dujj1216x2ntc" path="res://Assets/UI/Font/static/Montserrat-Medium.ttf" id="1_ose87"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vq2om"]
+font = ExtResource("1_ose87")
+font_size = 35
+outline_size = 8
+outline_color = Color(1, 1, 1, 0.105882)
+
+[node name="lbl_level" type="Label"]
+show_behind_parent = true
+texture_filter = 1
+offset_left = -112.0
+offset_top = -13.0
+offset_right = -32.0
+offset_bottom = 30.0
+text = "Lvl 1"
+label_settings = SubResource("LabelSettings_vq2om")

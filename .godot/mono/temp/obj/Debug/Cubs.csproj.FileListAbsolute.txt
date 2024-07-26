@@ -1,0 +1,17 @@
+D:\Projetos\Cubs\.godot\mono\temp\bin\Debug\Cubs.deps.json
+D:\Projetos\Cubs\.godot\mono\temp\bin\Debug\Cubs.runtimeconfig.json
+D:\Projetos\Cubs\.godot\mono\temp\bin\Debug\Cubs.dll
+D:\Projetos\Cubs\.godot\mono\temp\bin\Debug\Cubs.pdb
+D:\Projetos\Cubs\.godot\mono\temp\bin\Debug\GodotSharp.dll
+D:\Projetos\Cubs\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+D:\Projetos\Cubs\.godot\mono\temp\obj\Debug\Cubs.csproj.AssemblyReference.cache
+D:\Projetos\Cubs\.godot\mono\temp\obj\Debug\Cubs.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\Cubs\.godot\mono\temp\obj\Debug\Cubs.AssemblyInfoInputs.cache
+D:\Projetos\Cubs\.godot\mono\temp\obj\Debug\Cubs.AssemblyInfo.cs
+D:\Projetos\Cubs\.godot\mono\temp\obj\Debug\Cubs.csproj.CoreCompileInputs.cache
+D:\Projetos\Cubs\.godot\mono\temp\obj\Debug\Cubs.csproj.Up2Date
+D:\Projetos\Cubs\.godot\mono\temp\obj\Debug\Cubs.dll
+D:\Projetos\Cubs\.godot\mono\temp\obj\Debug\refint\Cubs.dll
+D:\Projetos\Cubs\.godot\mono\temp\obj\Debug\Cubs.pdb
+D:\Projetos\Cubs\.godot\mono\temp\obj\Debug\Cubs.genruntimeconfig.cache
+D:\Projetos\Cubs\.godot\mono\temp\obj\Debug\ref\Cubs.dll

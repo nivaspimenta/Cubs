@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://wuy27cc3b3sx"]
+
+[ext_resource type="PackedScene" uid="uid://dwuj0jpvdw146" path="res://Scenes/Prefabs/plt.tscn" id="1_8ck6g"]
+[ext_resource type="PackedScene" uid="uid://duwp24nxq8c4f" path="res://Scenes/Prefabs/player.tscn" id="2_p5mqp"]
+[ext_resource type="PackedScene" uid="uid://bp0eqfv7t48f0" path="res://Scenes/Prefabs/bor.tscn" id="2_qmmhh"]
+[ext_resource type="PackedScene" uid="uid://nbwkwucboosw" path="res://Scenes/Prefabs/killzone.tscn" id="3_aijp6"]
+[ext_resource type="PackedScene" uid="uid://rfkenplymdpi" path="res://Scenes/Levels/level10.tscn" id="4_ggjrl"]
+[ext_resource type="PackedScene" uid="uid://df7741vpeqdhd" path="res://Scenes/Prefabs/end.tscn" id="4_sd5wc"]
+[ext_resource type="PackedScene" uid="uid://banew4s5g3lgd" path="res://Scenes/UI/lbl_level.tscn" id="5_if548"]
+
+[node name="Level9" type="Node2D"]
+
+[node name="plt" parent="." instance=ExtResource("1_8ck6g")]
+
+[node name="plt2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_8ck6g")]
+position = Vector2(-48, 48)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt3" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_8ck6g")]
+position = Vector2(0, 89.5)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt4" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_8ck6g")]
+position = Vector2(64, 89)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt5" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_8ck6g")]
+position = Vector2(112, 49)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="bor" parent="." instance=ExtResource("2_qmmhh")]
+position = Vector2(-48, 32)
+cor = Color(1, 1, 1, 0.0392157)
+
+[node name="bor2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_qmmhh")]
+position = Vector2(216, 72)
+sprite = NodePath("../bor/Sprite2D")
+cor = Color(1, 1, 1, 0.0156863)
+
+[node name="end" parent="." instance=ExtResource("4_sd5wc")]
+position = Vector2(208, 88)
+nl = ExtResource("4_ggjrl")
+
+[node name="KillZone" parent="." instance=ExtResource("3_aijp6")]
+position = Vector2(16, 80)
+
+[node name="Player" parent="." instance=ExtResource("2_p5mqp")]
+position = Vector2(0, -16)
+
+[node name="lbl_level" parent="." instance=ExtResource("5_if548")]
+offset_left = -96.0
+offset_top = -9.0
+offset_right = -16.0
+offset_bottom = 34.0
+text = "Lvl 9"

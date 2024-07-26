@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=3 uid="uid://dm37un17wh1lc"]
+
+[ext_resource type="PackedScene" uid="uid://dwuj0jpvdw146" path="res://Scenes/Prefabs/plt.tscn" id="1_otxww"]
+[ext_resource type="PackedScene" uid="uid://duwp24nxq8c4f" path="res://Scenes/Prefabs/player.tscn" id="2_um58g"]
+[ext_resource type="PackedScene" uid="uid://bp0eqfv7t48f0" path="res://Scenes/Prefabs/bor.tscn" id="2_uo75m"]
+[ext_resource type="PackedScene" uid="uid://f0dxp42xxml4" path="res://Scenes/Levels/level12.tscn" id="4_bry7q"]
+[ext_resource type="PackedScene" uid="uid://df7741vpeqdhd" path="res://Scenes/Prefabs/end.tscn" id="4_fwtbd"]
+[ext_resource type="PackedScene" uid="uid://nbwkwucboosw" path="res://Scenes/Prefabs/killzone.tscn" id="5_ds3ha"]
+[ext_resource type="PackedScene" uid="uid://banew4s5g3lgd" path="res://Scenes/UI/lbl_level.tscn" id="6_21487"]
+
+[node name="Level11" type="Node2D"]
+
+[node name="plt" parent="." instance=ExtResource("1_otxww")]
+position = Vector2(-32, 0)
+
+[node name="plt2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_otxww")]
+position = Vector2(32, 0)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt3" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_otxww")]
+position = Vector2(96, 32)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt4" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_otxww")]
+position = Vector2(112, 32)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt5" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_otxww")]
+position = Vector2(128, 32)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt6" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_otxww")]
+position = Vector2(128, 32)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="bor" parent="." instance=ExtResource("2_uo75m")]
+position = Vector2(-16, 0)
+
+[node name="bor2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_uo75m")]
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor3" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_uo75m")]
+position = Vector2(16, 0)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor4" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_uo75m")]
+position = Vector2(-32, -16)
+sprite = NodePath("../bor/Sprite2D")
+cor = Color(1, 1, 1, 0.0156863)
+
+[node name="bor5" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_uo75m")]
+position = Vector2(-80, 0)
+sprite = NodePath("../bor/Sprite2D")
+cor = Color(1, 1, 1, 0.0156863)
+
+[node name="bor7" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_uo75m")]
+position = Vector2(152, 16)
+sprite = NodePath("../bor/Sprite2D")
+cor = Color(1, 1, 1, 0.0156863)
+
+[node name="bor6" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_uo75m")]
+position = Vector2(-48, 0)
+sprite = NodePath("../bor/Sprite2D")
+cor = Color(1, 1, 1, 0.0156863)
+
+[node name="end" parent="." instance=ExtResource("4_fwtbd")]
+position = Vector2(-64, 16)
+
+[node name="end2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("4_fwtbd")]
+position = Vector2(144, 32)
+sprite = NodePath("../end/Sprite2D")
+nl = ExtResource("4_bry7q")
+
+[node name="end3" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("4_fwtbd")]
+position = Vector2(160, 32)
+sprite = NodePath("../end/Sprite2D")
+nl = ExtResource("4_bry7q")
+
+[node name="KillZone" parent="." instance=ExtResource("5_ds3ha")]
+position = Vector2(0, 144)
+
+[node name="Player" parent="." instance=ExtResource("2_um58g")]
+position = Vector2(0, -96)
+
+[node name="lbl_level" parent="." instance=ExtResource("6_21487")]
+offset_top = -64.0
+offset_right = -28.0
+offset_bottom = -21.0
+text = "Lvl 11"

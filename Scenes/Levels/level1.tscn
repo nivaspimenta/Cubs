@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfrdbs2404blw"]
+
+[ext_resource type="PackedScene" uid="uid://dwuj0jpvdw146" path="res://Scenes/Prefabs/plt.tscn" id="1_xcku0"]
+[ext_resource type="PackedScene" uid="uid://df7741vpeqdhd" path="res://Scenes/Prefabs/end.tscn" id="2_i0l2b"]
+[ext_resource type="PackedScene" uid="uid://dfl6n3mijfou" path="res://Scenes/Levels/level2.tscn" id="3_qa5yy"]
+[ext_resource type="PackedScene" uid="uid://duwp24nxq8c4f" path="res://Scenes/Prefabs/player.tscn" id="4_083ah"]
+[ext_resource type="PackedScene" uid="uid://nbwkwucboosw" path="res://Scenes/Prefabs/killzone.tscn" id="5_fl7pj"]
+[ext_resource type="PackedScene" uid="uid://banew4s5g3lgd" path="res://Scenes/UI/lbl_level.tscn" id="6_lpm6c"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="plt" parent="." instance=ExtResource("1_xcku0")]
+z_index = 2
+position = Vector2(0, 26)
+
+[node name="plt2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_xcku0")]
+z_index = 2
+position = Vector2(16, 26)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt3" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_xcku0")]
+z_index = 2
+position = Vector2(64, -6)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt4" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_xcku0")]
+z_index = 2
+position = Vector2(80, -22)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt5" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_xcku0")]
+z_index = 2
+position = Vector2(32, 10)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt6" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_xcku0")]
+z_index = 2
+position = Vector2(48, 10)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="end" parent="." instance=ExtResource("2_i0l2b")]
+z_index = 2
+position = Vector2(96, -37)
+nl = ExtResource("3_qa5yy")
+
+[node name="Player" parent="." instance=ExtResource("4_083ah")]
+z_index = 2
+position = Vector2(0, 10)
+
+[node name="KillZone" parent="." instance=ExtResource("5_fl7pj")]
+z_index = 2
+position = Vector2(0, 128)
+
+[node name="lbl_level" parent="." instance=ExtResource("6_lpm6c")]
+metadata/_edit_use_anchors_ = true

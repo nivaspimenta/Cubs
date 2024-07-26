@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfxixwry3r28t"]
+
+[ext_resource type="PackedScene" uid="uid://dwuj0jpvdw146" path="res://Scenes/Prefabs/plt.tscn" id="1_a1dbj"]
+[ext_resource type="PackedScene" uid="uid://duwp24nxq8c4f" path="res://Scenes/Prefabs/player.tscn" id="2_6rnt3"]
+[ext_resource type="PackedScene" uid="uid://wuy27cc3b3sx" path="res://Scenes/Levels/level9.tscn" id="3_24pxm"]
+[ext_resource type="PackedScene" uid="uid://df7741vpeqdhd" path="res://Scenes/Prefabs/end.tscn" id="3_t2we6"]
+[ext_resource type="PackedScene" uid="uid://bp0eqfv7t48f0" path="res://Scenes/Prefabs/bor.tscn" id="4_gfrys"]
+[ext_resource type="PackedScene" uid="uid://nbwkwucboosw" path="res://Scenes/Prefabs/killzone.tscn" id="4_qax8l"]
+[ext_resource type="PackedScene" uid="uid://banew4s5g3lgd" path="res://Scenes/UI/lbl_level.tscn" id="5_umkhn"]
+
+[node name="Level8" type="Node2D"]
+
+[node name="plt" parent="." instance=ExtResource("1_a1dbj")]
+
+[node name="end" parent="." instance=ExtResource("3_t2we6")]
+position = Vector2(64, 0)
+
+[node name="end2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_t2we6")]
+position = Vector2(-64, 0)
+sprite = NodePath("../end/Sprite2D")
+nl = ExtResource("3_24pxm")
+
+[node name="bor" parent="." instance=ExtResource("4_gfrys")]
+position = Vector2(-32, -48)
+
+[node name="bor2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("4_gfrys")]
+position = Vector2(32, -48)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor3" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("4_gfrys")]
+position = Vector2(64, -16)
+sprite = NodePath("../bor/Sprite2D")
+cor = Color(1, 1, 1, 0.0156863)
+
+[node name="bor4" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("4_gfrys")]
+position = Vector2(-72, -16)
+sprite = NodePath("../bor/Sprite2D")
+cor = Color(1, 1, 1, 0.0156863)
+
+[node name="KillZone" parent="." instance=ExtResource("4_qax8l")]
+
+[node name="Player" parent="." instance=ExtResource("2_6rnt3")]
+position = Vector2(0, -16)
+
+[node name="lbl_level" parent="." instance=ExtResource("5_umkhn")]
+offset_left = -40.0
+offset_top = -112.0
+offset_right = 41.0
+offset_bottom = -69.0
+text = "Lvl 8"

@@ -1,0 +1,94 @@
+[gd_scene load_steps=9 format=3 uid="uid://bm3ff05flqrbh"]
+
+[ext_resource type="PackedScene" uid="uid://dwuj0jpvdw146" path="res://Scenes/Prefabs/plt.tscn" id="1_jewvm"]
+[ext_resource type="PackedScene" uid="uid://cag46iasctykx" path="res://Scenes/Prefabs/cch.tscn" id="2_i7iav"]
+[ext_resource type="PackedScene" uid="uid://bp0eqfv7t48f0" path="res://Scenes/Prefabs/bor.tscn" id="3_60wlh"]
+[ext_resource type="PackedScene" uid="uid://duwp24nxq8c4f" path="res://Scenes/Prefabs/player.tscn" id="4_ro8fo"]
+[ext_resource type="PackedScene" uid="uid://nbwkwucboosw" path="res://Scenes/Prefabs/killzone.tscn" id="5_pp7eb"]
+[ext_resource type="PackedScene" uid="uid://df7741vpeqdhd" path="res://Scenes/Prefabs/end.tscn" id="6_8ayww"]
+[ext_resource type="PackedScene" uid="uid://c7cnk33qsn8t3" path="res://Scenes/Levels/level5.tscn" id="7_psipf"]
+[ext_resource type="PackedScene" uid="uid://banew4s5g3lgd" path="res://Scenes/UI/lbl_level.tscn" id="8_7mn7h"]
+
+[node name="Level4" type="Node2D"]
+
+[node name="plt" parent="." instance=ExtResource("1_jewvm")]
+position = Vector2(0, 0.5)
+
+[node name="plt2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_jewvm")]
+position = Vector2(16, 0.5)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt3" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_jewvm")]
+position = Vector2(32, 16)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt4" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_jewvm")]
+position = Vector2(64, -16)
+sprite = NodePath("../plt/Sprite2D")
+cor = Color(0.729412, 0.764706, 0, 1)
+
+[node name="plt5" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_jewvm")]
+position = Vector2(128, -64)
+sprite = NodePath("../plt/Sprite2D")
+cor = Color(0.729412, 0.764706, 0, 1)
+
+[node name="plt6" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_jewvm")]
+position = Vector2(-80, -48)
+sprite = NodePath("../plt/Sprite2D")
+cor = Color(0.729412, 0.764706, 0, 1)
+
+[node name="plt7" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_jewvm")]
+position = Vector2(0, -48)
+sprite = NodePath("../plt/Sprite2D")
+cor = Color(0.665825, 0.390328, 0.107163, 1)
+
+[node name="plt8" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_jewvm")]
+position = Vector2(48, -80)
+sprite = NodePath("../plt/Sprite2D")
+cor = Color(0.843137, 0, 0.443137, 1)
+
+[node name="cch" parent="." instance=ExtResource("2_i7iav")]
+position = Vector2(48, 16)
+cor = Color(0.730745, 0.764177, 0, 1)
+
+[node name="cch2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_i7iav")]
+position = Vector2(112, -64)
+sprite = NodePath("../cch/Sprite2D")
+cor = Color(0.842548, 2.40654e-07, 0.441503, 1)
+
+[node name="bor" parent="." instance=ExtResource("3_60wlh")]
+position = Vector2(80, -16)
+
+[node name="bor5" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_60wlh")]
+position = Vector2(-16, 8.5)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_60wlh")]
+position = Vector2(96, -16)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor3" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_60wlh")]
+position = Vector2(32, -80)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor4" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_60wlh")]
+position = Vector2(-16, -48)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="Player" parent="." instance=ExtResource("4_ro8fo")]
+position = Vector2(0, -16)
+
+[node name="KillZone" parent="." instance=ExtResource("5_pp7eb")]
+position = Vector2(88, 80)
+
+[node name="end" parent="." instance=ExtResource("6_8ayww")]
+position = Vector2(-32, 0.5)
+nl = ExtResource("7_psipf")
+cor = Color(0.843137, 0, 0.443137, 1)
+
+[node name="lbl_level" parent="." instance=ExtResource("8_7mn7h")]
+offset_left = 16.0
+offset_top = -64.0
+offset_right = 107.0
+offset_bottom = -7.0
+text = "Lvl 4"

@@ -1,0 +1,30 @@
+[gd_scene load_steps=10 format=3 uid="uid://cvcd7gl7j77u7"]
+
+[ext_resource type="Script" path="res://Scripts/Core/GameManager.cs" id="1_js7lq"]
+[ext_resource type="PackedScene" uid="uid://bj70wn1ynkyyw" path="res://Scenes/Prefabs/player.tscn" id="2_r8gc5"]
+[ext_resource type="Script" path="res://Scripts/Core/LevelManager.cs" id="3_l0n38"]
+[ext_resource type="PackedScene" uid="uid://bghs0fxp3i13t" path="res://Scenes/Prefabs/plt.tscn" id="4_5px83"]
+[ext_resource type="PackedScene" uid="uid://cawp1agvw3qig" path="res://Scenes/Prefabs/bor.tscn" id="5_jeuid"]
+[ext_resource type="PackedScene" uid="uid://bej4ptg6fddeg" path="res://Scenes/Prefabs/str.tscn" id="6_usok3"]
+[ext_resource type="PackedScene" uid="uid://b7ngi42s84lfl" path="res://Scenes/Prefabs/end.tscn" id="7_nkxwe"]
+[ext_resource type="Resource" uid="uid://dlgojfnj3y0y8" path="res://Resources/R_NIVEIS.tres" id="8_n4frw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_frmhc"]
+
+[node name="GameManager" type="Node2D"]
+script = ExtResource("1_js7lq")
+Jogador = ExtResource("2_r8gc5")
+
+[node name="LevelManager" type="Node" parent="."]
+script = ExtResource("3_l0n38")
+plt = ExtResource("4_5px83")
+brd = ExtResource("5_jeuid")
+stt = ExtResource("6_usok3")
+end = ExtResource("7_nkxwe")
+Niveis = ExtResource("8_n4frw")
+
+[node name="RestartZone" type="Area2D" parent="."]
+position = Vector2(0, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RestartZone"]
+shape = SubResource("WorldBoundaryShape2D_frmhc")

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://duwp24nxq8c4f"]
+
+[ext_resource type="Texture2D" uid="uid://cx81af86eek4d" path="res://Assets/Sprites/player.png" id="1_7tn8s"]
+[ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_r45le"]
+[ext_resource type="AudioStream" uid="uid://8chr1ln157y1" path="res://Assets/audio/game-start.mp3" id="2_m1a4o"]
+[ext_resource type="AudioStream" uid="uid://cxw5ifkl0bb67" path="res://Assets/audio/toy-jump.mp3" id="2_q4pvl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_33x0s"]
+radius = 8.0
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("sprite", "audioStreamer")]
+collision_layer = 2
+script = ExtResource("1_r45le")
+speed = 100.0
+jumpSpeed = -400.0
+gravity = 980.0
+sprite = NodePath("sprite")
+audiodeath = ExtResource("2_m1a4o")
+audiojump = ExtResource("2_q4pvl")
+audioStreamer = NodePath("AudioStreamPlayer")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -1)
+texture = ExtResource("1_7tn8s")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_33x0s")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"

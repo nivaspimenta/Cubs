@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=3 uid="uid://b0igrr3r7etiv"]
+
+[ext_resource type="PackedScene" uid="uid://dwuj0jpvdw146" path="res://Scenes/Prefabs/plt.tscn" id="1_qwkfq"]
+[ext_resource type="PackedScene" uid="uid://duwp24nxq8c4f" path="res://Scenes/Prefabs/player.tscn" id="2_gmqn2"]
+[ext_resource type="PackedScene" uid="uid://bp0eqfv7t48f0" path="res://Scenes/Prefabs/bor.tscn" id="2_gxlpv"]
+[ext_resource type="PackedScene" uid="uid://df7741vpeqdhd" path="res://Scenes/Prefabs/end.tscn" id="3_rl7c6"]
+[ext_resource type="PackedScene" uid="uid://bm3ff05flqrbh" path="res://Scenes/Levels/level4.tscn" id="4_0w4cl"]
+[ext_resource type="PackedScene" uid="uid://nbwkwucboosw" path="res://Scenes/Prefabs/killzone.tscn" id="5_86y10"]
+[ext_resource type="PackedScene" uid="uid://banew4s5g3lgd" path="res://Scenes/UI/lbl_level.tscn" id="6_iglmh"]
+
+[node name="Level3" type="Node2D"]
+
+[node name="plt" parent="." instance=ExtResource("1_qwkfq")]
+position = Vector2(0, 48)
+
+[node name="plt2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_qwkfq")]
+position = Vector2(16, 48)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt3" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_qwkfq")]
+position = Vector2(32, 48)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt4" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_qwkfq")]
+position = Vector2(64, 32)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt5" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_qwkfq")]
+position = Vector2(80, 32)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt6" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_qwkfq")]
+position = Vector2(160, 32)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="plt7" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_qwkfq")]
+position = Vector2(176, 32)
+sprite = NodePath("../plt/Sprite2D")
+
+[node name="bor" parent="." instance=ExtResource("2_gxlpv")]
+position = Vector2(48, 48)
+
+[node name="bor2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_gxlpv")]
+position = Vector2(96, 48)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor3" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_gxlpv")]
+position = Vector2(112, 48)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor4" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_gxlpv")]
+position = Vector2(128, 48)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor5" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_gxlpv")]
+position = Vector2(144, 48)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor6" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_gxlpv")]
+position = Vector2(272, 16)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor7" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_gxlpv")]
+position = Vector2(272, 32)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor8" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_gxlpv")]
+position = Vector2(272, 48)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor9" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_gxlpv")]
+position = Vector2(256, 48)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor10" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_gxlpv")]
+position = Vector2(240, 48)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor11" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_gxlpv")]
+position = Vector2(224, 48)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="bor12" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_gxlpv")]
+position = Vector2(224, 48)
+sprite = NodePath("../bor/Sprite2D")
+
+[node name="end" parent="." instance=ExtResource("3_rl7c6")]
+position = Vector2(256, 32)
+nl = ExtResource("4_0w4cl")
+
+[node name="Player" parent="." instance=ExtResource("2_gmqn2")]
+position = Vector2(0, 32)
+
+[node name="KillZone" parent="." instance=ExtResource("5_86y10")]
+position = Vector2(136, 112)
+
+[node name="lbl_level" parent="." instance=ExtResource("6_iglmh")]
+offset_left = -32.0
+offset_top = -16.0
+offset_right = 59.0
+offset_bottom = 41.0
+text = "Lvl 3"

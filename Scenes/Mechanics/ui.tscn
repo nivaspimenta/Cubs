@@ -1,0 +1,203 @@
+[gd_scene load_steps=10 format=3 uid="uid://dxwak1c7csifx"]
+
+[ext_resource type="FontFile" uid="uid://bgsor0o3x212s" path="res://Assets/UI/Font/static/Montserrat-SemiBold.ttf" id="1_y8hdo"]
+[ext_resource type="Texture2D" uid="uid://bbygygsyrt1j2" path="res://Assets/Sprites/cchg.png" id="2_as2tx"]
+[ext_resource type="Texture2D" uid="uid://txx2slhpch2u" path="res://Assets/Sprites/border.png" id="3_vr2jq"]
+[ext_resource type="Texture2D" uid="uid://cw1x1rt2ppr8c" path="res://Assets/Sprites/plat.png" id="4_cc56j"]
+[ext_resource type="Texture2D" uid="uid://c02vyc2kjpydo" path="res://Assets/Sprites/end.png" id="5_2ogoa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yiutd"]
+font = ExtResource("1_y8hdo")
+font_size = 30
+outline_size = 1
+outline_color = Color(0.325441, 0.325441, 0.325441, 1)
+
+[sub_resource type="Animation" id="Animation_fgvn1"]
+resource_name = "blink"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lbl_play:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_35g6p"]
+_data = {
+"blink": SubResource("Animation_fgvn1")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_6c0vw"]
+font = ExtResource("1_y8hdo")
+font_size = 20
+
+[node name="ui" type="Control"]
+layout_direction = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="lbl_play" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.393229
+anchor_top = 0.812963
+anchor_right = 0.607292
+anchor_bottom = 0.848148
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press [space] to play game"
+label_settings = SubResource("LabelSettings_yiutd")
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_35g6p")
+}
+autoplay = "blink"
+
+[node name="R1" type="Control" parent="."]
+anchors_preset = 0
+anchor_left = 0.135417
+anchor_top = 0.240741
+anchor_right = 0.425
+anchor_bottom = 0.334259
+metadata/_edit_use_anchors_ = true
+
+[node name="tr_image" type="TextureRect" parent="R1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.00495049
+anchor_right = 0.179856
+anchor_bottom = 0.995049
+grow_vertical = 2
+texture = ExtResource("2_as2tx")
+metadata/_edit_use_anchors_ = true
+
+[node name="lbl_explanation" type="Label" parent="R1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.194245
+anchor_right = 0.983813
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "changes player color"
+label_settings = SubResource("LabelSettings_6c0vw")
+horizontal_alignment = 3
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 161
+metadata/_edit_use_anchors_ = true
+
+[node name="R2" type="Control" parent="."]
+anchors_preset = 0
+anchor_left = 0.572917
+anchor_top = 0.240741
+anchor_right = 0.8625
+anchor_bottom = 0.334259
+metadata/_edit_use_anchors_ = true
+
+[node name="tr_image" type="TextureRect" parent="R2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.00495049
+anchor_right = 0.179856
+anchor_bottom = 0.995049
+grow_vertical = 2
+texture = ExtResource("3_vr2jq")
+metadata/_edit_use_anchors_ = true
+
+[node name="lbl_explanation" type="Label" parent="R2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.194245
+anchor_right = 0.983813
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Instantly kills the player."
+label_settings = SubResource("LabelSettings_6c0vw")
+horizontal_alignment = 3
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 161
+metadata/_edit_use_anchors_ = true
+
+[node name="R3" type="Control" parent="."]
+anchors_preset = 0
+anchor_left = 0.135417
+anchor_top = 0.453704
+anchor_right = 0.425
+anchor_bottom = 0.547222
+metadata/_edit_use_anchors_ = true
+
+[node name="tr_image" type="TextureRect" parent="R3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.00494735
+anchor_right = 0.179856
+anchor_bottom = 0.995053
+grow_vertical = 2
+texture = ExtResource("4_cc56j")
+metadata/_edit_use_anchors_ = true
+
+[node name="lbl_explanation" type="Label" parent="R3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.194245
+anchor_right = 0.983813
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "This is a normal platform, but attention to his color."
+label_settings = SubResource("LabelSettings_6c0vw")
+horizontal_alignment = 3
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 161
+metadata/_edit_use_anchors_ = true
+
+[node name="R4" type="Control" parent="."]
+anchors_preset = 0
+anchor_left = 0.572917
+anchor_top = 0.453704
+anchor_right = 0.8625
+anchor_bottom = 0.547222
+metadata/_edit_use_anchors_ = true
+
+[node name="tr_image" type="TextureRect" parent="R4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.00495049
+anchor_right = 0.179856
+anchor_bottom = 0.995049
+grow_vertical = 2
+texture = ExtResource("5_2ogoa")
+metadata/_edit_use_anchors_ = true
+
+[node name="lbl_explanation" type="Label" parent="R4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.194245
+anchor_right = 0.983813
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Reach this platform to end the level."
+label_settings = SubResource("LabelSettings_6c0vw")
+horizontal_alignment = 3
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 161
+metadata/_edit_use_anchors_ = true

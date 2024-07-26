@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2kyea14etsxd"]
+
+[ext_resource type="FontFile" uid="uid://bbw606jyepagk" path="res://Assets/UI/Font/static/Montserrat-Light.ttf" id="1_xdcbl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nt15l"]
+font = ExtResource("1_xdcbl")
+font_size = 11
+
+[node name="lbl_explanation" type="Label"]
+show_behind_parent = true
+texture_filter = 1
+offset_right = 141.0
+offset_bottom = 14.0
+text = "Press [space] to jump"
+label_settings = SubResource("LabelSettings_nt15l")
+autowrap_mode = 2
+uppercase = true

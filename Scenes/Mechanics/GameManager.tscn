@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuyw126mkibot"]
+
+[ext_resource type="Script" path="res://Scripts/Core/GameManager.gd" id="1_psfrn"]
+[ext_resource type="AudioStream" uid="uid://dpro0cuvdja26" path="res://Assets/audio/game-music-loop-7-XtremeFreddy.mp3" id="2_2gwq7"]
+
+[node name="GameManager" type="Node2D"]
+script = ExtResource("1_psfrn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_2gwq7")
+autoplay = true
+bus = &"Music"

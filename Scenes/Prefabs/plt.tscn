@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwuj0jpvdw146"]
+
+[ext_resource type="Script" path="res://Scripts/Core/pltfm.gd" id="1_8hvyy"]
+[ext_resource type="Texture2D" uid="uid://cw1x1rt2ppr8c" path="res://Assets/Sprites/plat.png" id="1_mw7vj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhoyr"]
+size = Vector2(16, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ih7ow"]
+size = Vector2(16, 15)
+
+[node name="plt" type="StaticBody2D" node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_8hvyy")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mw7vj")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_uhoyr")
+debug_color = Color(0.754444, 0.434089, 0.389079, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ih7ow")
+debug_color = Color(8.66354e-07, 0.576435, 0.818843, 0.42)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_entered"]
